@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActDirectSelling.ResellerDetailSelling">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding8"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_nomor"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/padding8">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nomor Event"
+                    style="@style/TitleText"/>
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edt_nomor"
+                    android:inputType="none"
+                    android:padding="@dimen/padding8"
+                    android:background="@drawable/bg_input"
+                    android:editable="false"
+                    android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_lokasi"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/padding8">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lokasi Event"
+                    style="@style/TitleText"/>
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edt_lokasi"
+                    android:padding="@dimen/padding8"
+                    android:background="@drawable/bg_input"
+                    android:inputType="none"
+                    android:editable="false"
+                    android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_poi"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/padding8">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="POI"
+                    style="@style/TitleText"/>
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/actv_poi"
+                    android:hint="Customer"
+                    android:gravity="center_vertical"
+                    android:paddingRight="@dimen/padding8"
+                    android:background="@drawable/bg_input"
+                    android:drawableLeft="@mipmap/ic_search"
+                    android:inputType="textPersonName"
+                    android:imeOptions="actionNext"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding2"
+                    android:text="Memilih POI akan terhitung sebagai kunjungan"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/padding8">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Pelanggan *"
+                    style="@style/TitleText"/>
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/actv_nama"
+                    android:hint=""
+                    android:text=""
+                    android:padding="@dimen/padding10"
+                    android:background="@drawable/bg_input"
+                    android:gravity="center_vertical"
+                    android:inputType="textPersonName"
+                    android:imeOptions="actionNext"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/padding8">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Alamat *"
+                    style="@style/TitleText"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edt_alamat"
+                    android:background="@drawable/bg_input"
+                    android:padding="@dimen/padding10"
+                    android:gravity="center_vertical"
+                    android:inputType="textPersonName"
+                    android:imeOptions="actionDone"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/padding20"
+                android:layout_marginBottom="@dimen/padding8"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/btn_red"
+                    android:padding="@dimen/padding10"
+                    android:id="@+id/ll_beli_pulsa"
+                    android:gravity="center"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3"
+                        android:padding="@dimen/padding2"
+                        android:src="@drawable/order_mkios_putih"
+                        android:scaleType="fitCenter"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.7"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:gravity="center_vertical"
+                        android:text="Beli Pulsa"
+                        android:textStyle=""
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_white"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/padding10"
+                    android:background="@drawable/btn_red"
+                    android:gravity="center"
+                    android:padding="@dimen/padding10"
+                    android:id="@+id/ll_beli_perdana"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3"
+                        android:src="@drawable/order_perdana_putih"
+                        android:scaleType="fitCenter"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.7"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:gravity="center_vertical"
+                        android:text="Beli Perdana"
+                        android:textStyle=""
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_white"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/pb_loading"
+        android:visibility="gone"/>
+
+</RelativeLayout>

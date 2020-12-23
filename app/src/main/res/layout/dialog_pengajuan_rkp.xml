@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/modul_margin_default"
+        android:layout_marginBottom="@dimen/modul_margin_default"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="230dp"
+            android:layout_height="90dp"
+            android:orientation="vertical"
+            android:id="@+id/ll_head"
+            android:gravity="center"
+            android:background="@drawable/bg_dialog_blue"
+            >
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@mipmap/ic_decision_white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/ll_footer"
+            android:gravity="center"
+            android:padding="@dimen/modul_margin_default"
+            android:background="@drawable/bg_dialog_white"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_black"
+                android:text="Setujui pengajuan ini ?"
+                android:textSize="@dimen/modul_dialog_size"
+                android:gravity="center"
+                android:id="@+id/tv_text1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:textColor="@color/color_red_dialog"
+                    android:id="@+id/btn_tolak"
+                    android:text="Tolak"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:textColor="@color/color_blue_dialog"
+                    android:id="@+id/btn_setujui"
+                    android:text="Setujui"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

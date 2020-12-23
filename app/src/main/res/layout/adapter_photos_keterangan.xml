@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/padding2"
+    android:layout_marginLeft="@dimen/padding2"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/iv_item1"
+        android:background="@color/color_grey"
+        android:scaleType="fitCenter"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/iv_delete"
+        android:src="@mipmap/ic_delete"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_item1"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/padding5">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TitleText"
+            android:textSize="12sp"
+            android:text="Keterangan" />
+
+        <EditText
+            android:id="@+id/edt_keterangan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:layout_marginTop="@dimen/padding5"
+            android:background="@drawable/style_box_bordered_rounded"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="..."
+            android:inputType="textMultiLine"
+            android:padding="@dimen/padding5"
+            android:text=""
+            android:textSize="@dimen/text14" />
+    </LinearLayout>
+</RelativeLayout>

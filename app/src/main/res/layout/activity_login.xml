@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    tools:context=".ActivityLogin">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <LinearLayout
+        android:id="@+id/view_username"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingLeft="@dimen/padding10"
+        android:paddingRight="@dimen/padding10"
+        android:background="@drawable/style_box_bordered_rounded"
+        app:layout_constraintBottom_toTopOf="@+id/view_password"
+        app:layout_constraintDimensionRatio="w,5:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline"
+        android:layout_marginEnd="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginStart="70dp">
+
+        <ImageView
+            android:padding="@dimen/padding5"
+            android:contentDescription="@string/username"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/user"
+            android:layout_weight="0.15"/>
+
+        <EditText
+            android:id="@+id/txt_username"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:paddingLeft="@dimen/padding10"
+            android:paddingStart="@dimen/padding10"
+            android:paddingRight="@dimen/padding10"
+            android:paddingEnd="@dimen/padding10"
+            android:layout_weight="0.85"
+            android:hint="@string/username"
+            android:inputType="textPersonName"
+            android:textSize="@dimen/text16"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/view_password"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingLeft="@dimen/padding10"
+        android:paddingRight="@dimen/padding10"
+        android:background="@drawable/style_box_bordered_rounded"
+        app:layout_constraintBottom_toTopOf="@+id/btn_login"
+        app:layout_constraintDimensionRatio="w,5:1"
+        app:layout_constraintEnd_toEndOf="@+id/view_username"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view_username"
+        app:layout_constraintTop_toBottomOf="@+id/view_username" >
+
+        <ImageView
+            android:padding="@dimen/padding5"
+            android:contentDescription="@string/password"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/password"
+            android:layout_weight="0.15"/>
+
+        <EditText
+            android:id="@+id/txt_password"
+            android:layout_width="0dp"
+            android:background="@android:color/transparent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:paddingLeft="@dimen/padding10"
+            android:paddingStart="@dimen/padding10"
+            android:paddingRight="@dimen/padding10"
+            android:paddingEnd="@dimen/padding10"
+            android:hint="@string/password"
+            android:layout_weight="0.85"
+            android:inputType="textPassword"
+            android:textSize="@dimen/text16" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@color/colorAccent"
+        android:text="@string/login"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text18"
+        app:layout_constraintBottom_toTopOf="@id/ll_footer"
+        app:layout_constraintDimensionRatio="5:1"
+        app:layout_constraintEnd_toEndOf="@+id/view_username"
+        app:layout_constraintStart_toStartOf="@+id/view_username"
+        app:layout_constraintTop_toBottomOf="@+id/view_password" />
+
+    <LinearLayout
+        android:id="@+id/ll_footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_item"
+        android:padding="@dimen/margin_small"
+        app:layout_constraintDimensionRatio="5:1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/view_username"
+        app:layout_constraintStart_toStartOf="@+id/view_username"
+        app:layout_constraintTop_toBottomOf="@+id/view_password"
+        android:layout_marginBottom="20dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/ll_id1"
+            android:padding="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID Pertama"
+                    android:textColor="@color/color_black"
+                    android:textSize="11sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/tv_id1"
+                    android:textColor="@color/color_black"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/iv_copy1"
+                android:layout_marginLeft="@dimen/margin_default"
+                android:src="@drawable/ic_copy"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/ll_id2"
+            android:padding="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="ID Kedua"
+                    android:textColor="@color/color_black"
+                    android:textSize="11sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/tv_id2"
+                    android:textColor="@color/color_black"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/iv_copy2"
+                android:layout_marginLeft="@dimen/margin_default"
+                android:src="@drawable/ic_copy"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintDimensionRatio="h,4:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_perkasa" />
+</androidx.constraintlayout.widget.ConstraintLayout>

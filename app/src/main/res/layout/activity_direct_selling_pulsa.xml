@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActDirectSelling.DirectSellingPulsa">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarSize="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/formGroup">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nomor HP *"
+                    style="@style/TitleText"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edt_nomor"
+                    style="@style/ValueEdittext"
+                    android:inputType="phone"
+                    android:text=""
+                    android:imeOptions="actionDone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/formGroup">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding8"
+                    android:text="Nominal Pulsa / barang *"
+                    style="@style/TitleText"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <com.maulana.custommodul.CustomView.NestedListView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="true"
+                        android:id="@+id/lv_barang"></com.maulana.custommodul.CustomView.NestedListView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/formGroup"
+                android:visibility="gone"
+                android:id="@+id/ll_nominal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nominal *"
+                    style="@style/TitleText"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edt_nominal"
+                    style="@style/ValueEdittext"
+                    android:inputType="numberSigned"
+                    android:hint="10000"
+                    android:imeOptions="actionNext"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/formGroup">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pin Chip"
+                    style="@style/TitleText"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edt_pin"
+                    style="@style/ValueEdittext"
+                    android:inputType="numberSigned"
+                    android:hint="1234"
+                    android:imeOptions="actionDone"/>
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Simpan Pin Chip"
+                    android:id="@+id/cb_pin"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/formGroup">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Harga"
+                    style="@style/TitleText"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edt_harga"
+                    style="@style/ValueEdittext.disable"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/formGroup">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Balasan"
+                    style="@style/TitleText"/>
+
+                <com.maulana.custommodul.CustomView.NestedListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lv_balasan"
+                    android:nestedScrollingEnabled="true"></com.maulana.custommodul.CustomView.NestedListView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/formGroup"
+                android:orientation="horizontal"
+                android:id="@+id/ll_jarak"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.85"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/posisi_user"
+                        android:textSize="@dimen/text14"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_jarak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="@dimen/text18"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.15"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="@dimen/ic_height_thor"
+                        android:layout_height="@dimen/ic_height_thor"
+                        android:background="?attr/selectableItemBackground"
+                        android:id="@+id/iv_refresh_jarak"
+                        android:src="@mipmap/ic_refresh"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_permission"
+                style="@style/formGroup">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:weightSum="1">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/edt_app"
+                        android:background="@null"
+                        android:inputType="none"
+                        android:editable="false"
+                        android:textSize="12sp"
+                        android:text="Pastikan ijin untuk menerima sms telah diaktifkan, jika anda tidak yakin silahkan tekan buka info app dan pilih permission."/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@drawable/select_button_red"
+                        android:textColor="@color/color_white"
+                        android:textSize="11sp"
+                        android:id="@+id/btn_app_info"
+                        android:text="Buka Info App"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding16"
+                android:layout_marginBottom="@dimen/padding8"
+                style="@style/formGroup">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btn_peta"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/padding10"
+                        android:background="#cacaca"
+                        android:text="@string/peta_outlet"
+                        android:textColor="#fff"/>
+
+                    <Button
+                        android:id="@+id/btn_proses"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding10"
+                        android:background="@color/colorAccent"
+                        android:text="@string/proses"
+                        android:textColor="#fff"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/pb_proses"
+        android:visibility="gone"/>
+
+</RelativeLayout>

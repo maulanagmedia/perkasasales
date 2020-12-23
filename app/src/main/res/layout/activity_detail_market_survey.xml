@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActMarketSurvey.DetailMarketSurvey">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:id="@+id/tv_title1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding10"
+            style="@style/TitleText"
+            android:text="@string/nama_reseller"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            style="@style/ValueText"
+            android:text=""
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title1" />
+
+        <TextView
+            android:id="@+id/tv_title2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding10"
+            style="@style/TitleText"
+            android:text="Telkomsel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nama" />
+
+        <LinearLayout
+            android:id="@+id/ll_title_telkomsel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding5"
+            android:layout_marginRight="@dimen/padding5"
+            android:layout_marginTop="@dimen/padding8"
+            android:background="@drawable/style_box_bordered_rounded"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="@dimen/padding5"
+                android:text="@string/nama_barang"
+                android:textSize="@dimen/text14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="@dimen/padding5"
+                android:text="@string/jumlah"
+                android:textSize="@dimen/text14"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_telkomsel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding5"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintTop_toBottomOf="@+id/ll_title_telkomsel" />
+
+        <TextView
+            android:id="@+id/tv_title3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding10"
+            style="@style/TitleText"
+            android:text="Non Telkomsel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_telkomsel" />
+
+        <LinearLayout
+            android:id="@+id/ll_title_non_telkomsel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding5"
+            android:layout_marginRight="@dimen/padding5"
+            android:layout_marginTop="@dimen/padding8"
+            android:background="@drawable/style_box_bordered_rounded"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title3"
+            android:weightSum="0.85">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:padding="@dimen/padding5"
+                android:text="@string/nama_barang"
+                android:textSize="@dimen/text14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:padding="@dimen/padding5"
+                android:text="Small"
+                android:textSize="@dimen/text14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:padding="@dimen/padding5"
+                android:text="Medium"
+                android:textSize="@dimen/text14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:padding="@dimen/padding5"
+                android:text="High"
+                android:textSize="@dimen/text14"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_non_telkomsel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding5"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintTop_toBottomOf="@+id/ll_title_non_telkomsel" />
+
+        <TextView
+            android:id="@+id/tv_title5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding10"
+            style="@style/TitleText"
+            android:text="Transaksi Non Telkomsel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_non_telkomsel" />
+
+        <TextView
+            android:id="@+id/tv_title6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding2"
+            android:textSize="12sp"
+            android:text="* Perdana (Segel/ARP) &amp; Evoucher (Mkios/Bulk)"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title5" />
+
+        <LinearLayout
+            android:id="@+id/ll_title_t_non_telkomsel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding5"
+            android:layout_marginRight="@dimen/padding5"
+            android:layout_marginTop="@dimen/padding8"
+            android:background="@drawable/style_box_bordered_rounded"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title6"
+            android:weightSum="0.65">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:padding="@dimen/padding5"
+                android:text="@string/nama_barang"
+                android:textSize="@dimen/text14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:padding="@dimen/padding5"
+                android:text="Perdana"
+                android:textSize="@dimen/text14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:padding="@dimen/padding5"
+                android:text="Evoucher"
+                android:textSize="@dimen/text14"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_t_non_telkomsel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding5"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintTop_toBottomOf="@+id/ll_title_t_non_telkomsel" />
+
+        <TextView
+            android:id="@+id/tv_title4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding10"
+            style="@style/TitleText"
+            android:text="Keterangan"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_t_non_telkomsel" />
+
+        <EditText
+            android:id="@+id/edt_keterangan"
+            android:layout_width="0dp"
+            android:layout_height="76dp"
+            android:layout_marginTop="@dimen/padding10"
+            android:background="@drawable/style_box_bordered_rounded"
+            android:ems="10"
+            android:visibility="gone"
+            android:gravity="top"
+            android:hint="..."
+            android:inputType="textMultiLine"
+            android:padding="@dimen/padding5"
+            android:layout_marginLeft="@dimen/padding5"
+            android:layout_marginRight="@dimen/padding5"
+            android:text=""
+            android:textSize="@dimen/text14"
+            app:layout_constraintBottom_toTopOf="@+id/ll_jarak"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title4" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/ll_jarak"
+            android:layout_marginTop="@dimen/padding10"
+            android:layout_marginLeft="@dimen/padding5"
+            android:layout_marginRight="@dimen/padding5"
+            app:layout_constraintBottom_toTopOf="@+id/btn_peta"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_keterangan"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.85"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/posisi_user"
+                    android:textSize="@dimen/text14"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_jarak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="@dimen/text18"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.15"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/ic_height_thor"
+                    android:layout_height="@dimen/ic_height_thor"
+                    android:background="?attr/selectableItemBackground"
+                    android:id="@+id/iv_refresh_jarak"
+                    android:src="@mipmap/ic_refresh"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_proses"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:background="@color/colorAccent"
+            android:text="@string/proses"
+            android:textColor="#fff"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_peta"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_peta"
+            app:layout_constraintTop_toTopOf="@+id/btn_peta" />
+
+        <Button
+            android:id="@+id/btn_peta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding20"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding10"
+            android:background="#cacaca"
+            android:text="@string/peta_outlet"
+            android:textColor="#000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_proses"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_jarak" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

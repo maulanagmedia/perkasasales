@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/supl_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:gravity="bottom"
+    sothree:umanoDragView="@+id/dragView"
+    sothree:umanoOverlay="true"
+    sothree:umanoPanelHeight="100dp"
+    sothree:umanoParallaxOffset="100dp"
+    sothree:umanoShadowHeight="4dp">
+
+    <!-- MAIN CONTENT -->
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding10"
+        tools:context=".ActOrderPerdana.ActivityOrderPerdana2">
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/nama_pelanggan"
+            style="@style/TitleText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            style="@style/ValueText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding10"
+            android:text="@string/nomor_ba"
+            style="@style/TitleText"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_nama" />
+
+        <EditText
+            android:id="@+id/txt_komplain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding10"
+            android:background="@drawable/style_box_bordered_rounded"
+            android:ems="10"
+            android:visibility="gone"
+            android:inputType="number"
+            android:padding="@dimen/padding5"
+            android:textAllCaps="true"
+            android:textSize="@dimen/text18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- SLIDING LAYOUT -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/dragView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding20"
+            android:paddingRight="@dimen/padding20"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:id="@+id/iv_icon"
+                android:src="@mipmap/ic_up" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/style_box_bordered_rounded"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.15"
+                    android:padding="@dimen/padding8"
+                    android:src="@drawable/search" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/padding10"
+                    android:layout_weight="0.85"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/nama_barang_surat_jalan"
+                    android:id="@+id/edt_search"
+                    android:inputType="textPersonName"
+                    android:imeOptions="actionSearch"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcy_barang"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"
+                android:id="@+id/pb_loading"/>
+        </RelativeLayout>
+    </LinearLayout>
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context=".ActVerifikasiReseller.ActivityVerifikasiOutlet1">
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tl_top"
+        android:background="@color/colorPrimary"
+        app:tabTextColor="@color/color_white"
+        app:tabSelectedTextColor="@color/color_white"
+        android:layout_alignParentTop="true"
+        app:tabMaxWidth="0dp"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabIndicatorColor="@color/color_white"
+        >
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Butuh Approval SPV"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Butuh Verifikasi MKIOS"/>
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <include
+        android:id="@+id/include_search"
+        layout="@layout/view_search"
+        android:layout_below="@id/tl_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ListView
+        android:id="@+id/lv_reseller"
+        android:layout_below="@id/include_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"/>
+
+</RelativeLayout>

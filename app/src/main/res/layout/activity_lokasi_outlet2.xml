@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_scroll"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityLokasiOutlet2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:id="@+id/textView45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="21dp"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="21dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/padding20"
+            android:gravity="center"
+            android:text="@string/edit_lokasi"
+            android:textSize="@dimen/text14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/map" />
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toTopOf="parent"
+            class="id.net.gmedia.perkasaapp.CustomMapView"
+            tools:context=".Activity_Tempat" />
+
+        <Button
+            android:id="@+id/btn_simpan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding20"
+            android:layout_marginEnd="@dimen/padding20"
+            android:layout_marginLeft="@dimen/padding20"
+            android:layout_marginRight="@dimen/padding20"
+            android:layout_marginStart="@dimen/padding20"
+            android:layout_marginTop="@dimen/padding20"
+            android:background="@color/colorAccent"
+            android:padding="@dimen/padding5"
+            android:text="@string/simpan"
+            android:textColor="#fff"
+            android:textSize="@dimen/text14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/img_outlet"
+            app:layout_constraintStart_toStartOf="@+id/img_outlet"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout16" />
+
+        <ImageView
+            android:id="@+id/img_outlet"
+            android:contentDescription="@string/outlet"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/padding40"
+            android:layout_marginRight="@dimen/padding40"
+            android:layout_marginTop="@dimen/padding10"
+            android:background="@drawable/style_box_bordered_rounded"
+            app:layout_constraintDimensionRatio="h,1:0.6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView45"
+            app:srcCompat="@drawable/style_box_bordered_rounded" />
+
+        <ImageView
+            android:id="@+id/img_camera"
+            android:contentDescription="@string/kamera"
+            android:layout_width="@dimen/img_size_small"
+            android:layout_height="@dimen/img_size_small"
+            android:layout_marginBottom="@dimen/padding5"
+            android:layout_marginEnd="@dimen/padding5"
+            android:layout_marginRight="@dimen/padding5"
+            android:background="@drawable/style_box_bordered_rounded"
+            android:padding="@dimen/padding5"
+            app:layout_constraintBottom_toBottomOf="@+id/img_outlet"
+            app:layout_constraintEnd_toEndOf="@+id/img_outlet"
+            map:srcCompat="@drawable/camera" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/padding10"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginStart="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding10"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding40"
+            android:paddingRight="@dimen/padding40"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_outlet">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/padding5"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView23"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    map:srcCompat="@drawable/user" />
+
+                <TextView
+                    android:id="@+id/txt_nama"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/padding5"
+                    android:textSize="@dimen/text14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/padding5"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView30"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    app:srcCompat="@drawable/outlet_grey" />
+
+                <TextView
+                    android:id="@+id/txt_alamat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/padding5"
+                    android:textSize="@dimen/text14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/padding5"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView31"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    app:srcCompat="@drawable/lokasi_grey" />
+
+                <EditText
+                    android:id="@+id/txt_latitude"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding5"
+                    android:layout_marginRight="@dimen/padding5"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/style_box_bordered_rounded"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="textPersonName"
+                    android:padding="@dimen/padding5"
+                    android:textSize="@dimen/text14" />
+
+                <EditText
+                    android:id="@+id/txt_longitude"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding5"
+                    android:layout_marginRight="@dimen/padding5"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/style_box_bordered_rounded"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="textPersonName"
+                    android:padding="@dimen/padding5"
+                    android:textSize="@dimen/text14" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

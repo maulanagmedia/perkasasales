@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="6dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_footer"
+        android:paddingTop="@dimen/default_margin_small"
+        android:paddingLeft="@dimen/default_margin_small"
+        android:paddingRight="@dimen/default_margin_small"
+        android:background="@drawable/bg_border_grey"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll_jarak">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edt_jarak"
+                    android:background="@null"
+                    android:inputType="none"
+                    android:editable="false"
+                    android:text="Menunggu proses perhitungan jarak..."/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_marginLeft="@dimen/default_margin_tiny"
+                    android:layout_marginRight="@dimen/default_margin_tiny"
+                    android:scaleType="centerInside"
+                    android:id="@+id/iv_refresh_position"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/ic_refresh"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/default_margin_small"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Total"
+                android:textStyle="bold"
+                android:textColor="@color/color_black"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rp 0"
+            android:id="@+id/tv_total"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="right"
+            android:textColor="@color/color_black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_line"
+            android:layout_marginTop="@dimen/default_margin_tiny"
+            android:layout_marginBottom="@dimen/default_margin_tiny"
+            android:background="@color/color_black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:visibility="gone"
+                android:paddingTop="@dimen/default_margin_tiny"
+                android:paddingBottom="@dimen/default_margin_tiny"
+                android:weightSum="1">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="0.95"
+                    android:layout_height="36dp"
+                    android:background="@drawable/btn_login"
+                    android:text="Tolak"
+                    android:id="@+id/btn_tolak"
+                    android:layout_marginTop="@dimen/default_margin_tiny"
+                    android:textColor="@color/color_white"
+                    android:layout_marginBottom="@dimen/default_margin_small"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingTop="@dimen/default_margin_tiny"
+                android:paddingBottom="@dimen/default_margin_tiny"
+                android:weightSum="1">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="0.45"
+                    android:layout_height="36dp"
+                    android:background="@drawable/btn_login"
+                    android:text="Peta Reseller"
+                    android:layout_marginRight="@dimen/default_margin"
+                    android:id="@+id/btn_maps_outlet"
+                    android:textColor="@color/color_white"
+                    android:layout_marginTop="@dimen/default_margin_tiny"
+                    android:layout_marginBottom="@dimen/default_margin_small"
+                    />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="0.45"
+                    android:layout_height="36dp"
+                    android:background="@drawable/btn_login_2"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:text="Terima"
+                    android:id="@+id/btn_terima"
+                    android:textColor="@color/color_white"
+                    android:layout_marginTop="@dimen/default_margin_tiny"
+                    android:layout_marginBottom="@dimen/default_margin_small"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lv_deposit"
+        android:layout_above="@id/ll_footer"></ListView>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/pb_loading"
+        />
+
+</RelativeLayout>

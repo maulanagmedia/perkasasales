@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActNotePengajuan.DetailPerubahanDataRS"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding10"
+            style="@style/TitleText"
+            android:text="@string/nama_reseller"/>
+
+        <TextView
+            android:id="@+id/tv_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            style="@style/ValueText"
+            android:text=""/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding10"
+            style="@style/TitleText"
+            android:text="@string/alamat"/>
+
+        <TextView
+            android:id="@+id/tv_alamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            style="@style/ValueText"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/tv_title4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding10"
+            style="@style/TitleText"
+            android:text="Keterangan" />
+
+        <EditText
+            android:id="@+id/edt_keterangan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="76dp"
+            android:layout_marginTop="@dimen/padding10"
+            android:background="@drawable/style_box_bordered_rounded"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="..."
+            android:inputType="textMultiLine"
+            android:padding="@dimen/padding5"
+            android:layout_marginLeft="@dimen/padding5"
+            android:layout_marginRight="@dimen/padding5"
+            android:text=""
+            android:textSize="@dimen/text14" />
+
+        <Button
+            android:id="@+id/btn_proses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:background="@color/colorAccent"
+            android:layout_marginTop="@dimen/padding20"
+            android:text="@string/simpan"
+            android:textColor="#fff" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActOrderTcash.ActivityOrderTcash3"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView46"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding10"
+            android:text="@string/keterangan"
+            android:textSize="@dimen/text14"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_harga" />
+
+        <TextView
+            android:id="@+id/txt_harga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            style="@style/ValueText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView42"
+            tools:text="@string/rupiah_0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/ll_akun"
+            android:layout_marginTop="@dimen/padding10"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            app:layout_constraintTop_toBottomOf="@+id/txt_nominal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding10"
+                style="@style/TitleText"
+                android:text="Cara Bayar"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/rg_crbayar"
+                android:weightSum="2">
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Tunai"
+                    android:checked="true"
+                    android:id="@+id/rb_tunai"/>
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Transfer"
+                    android:id="@+id/rb_bank"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding10"
+                style="@style/TitleText"
+                android:text="Akun"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sp_akun"
+                android:layout_marginTop="@dimen/padding10"></Spinner>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/padding10"
+            android:text="@string/harga"
+            style="@style/TitleText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_akun" />
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/padding10"
+            android:text="@string/nominal"
+            style="@style/TitleText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_nama" />
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/padding10"
+            android:text="@string/nama_pelanggan"
+            style="@style/TitleText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            style="@style/ValueText"
+            android:text=""
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+        <EditText
+            android:id="@+id/txt_nominal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            style="@style/ValueEdittext"
+            android:inputType="number"
+            android:padding="@dimen/padding8"
+            android:imeOptions="actionNext"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+        <EditText
+            android:id="@+id/txt_keterangan"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/padding10"
+            android:background="@drawable/style_box_bordered_rounded"
+            android:ems="10"
+            android:visibility="gone"
+            android:inputType="textMultiLine"
+            android:padding="@dimen/padding5"
+            app:layout_constraintDimensionRatio="h,4:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView46" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/ll_jarak"
+            android:layout_marginTop="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginLeft="@dimen/padding10"
+            app:layout_constraintBottom_toTopOf="@+id/btn_peta"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_keterangan"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.85"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/posisi_user"
+                    android:textSize="@dimen/text14"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_jarak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="@dimen/text18"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.15"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/ic_height_thor"
+                    android:layout_height="@dimen/ic_height_thor"
+                    android:background="?attr/selectableItemBackground"
+                    android:id="@+id/iv_refresh_jarak"
+                    android:src="@mipmap/ic_refresh"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_peta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding10"
+            android:text="@string/peta_outlet"
+            android:background="#cacaca"
+            android:textColor="#000"
+            app:layout_constraintEnd_toStartOf="@+id/btn_proses"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_jarak" />
+
+        <Button
+            android:id="@+id/btn_proses"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:background="@color/colorAccent"
+            android:text="@string/proses"
+            android:textColor="#fff"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_peta"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_peta"
+            app:layout_constraintTop_toTopOf="@+id/btn_peta" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

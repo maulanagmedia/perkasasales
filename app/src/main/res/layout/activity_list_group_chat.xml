@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActCustomerService.ListGroupChatActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:id="@+id/ll_header"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/padding8">
+
+        <LinearLayout
+            android:id="@+id/linearLayout10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/style_box_bordered_rounded"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/img_search"
+                android:contentDescription="@string/cari"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:padding="@dimen/padding8"
+                android:src="@drawable/search" />
+
+            <EditText
+                android:id="@+id/edt_customer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:hint="@string/nama_customer"
+                android:inputType="textPersonName"
+                android:imeOptions="actionSearch"
+                android:padding="@dimen/padding8"
+                android:textSize="@dimen/text18" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_header"
+        android:id="@+id/lv_chat"
+        android:divider="@null"
+        android:paddingTop="@dimen/padding10"
+        android:paddingBottom="@dimen/padding10"
+        ></ListView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_new_chat"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/padding40"
+        android:layout_marginBottom="@dimen/padding40"
+        android:id="@+id/fab_chat"
+        />
+
+</RelativeLayout>

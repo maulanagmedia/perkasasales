@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding2"
+    android:layout_marginTop="@dimen/padding2"
+    android:layout_marginBottom="@dimen/padding2"
+    android:layout_marginLeft="@dimen/padding8"
+    android:layout_marginRight="@dimen/padding8"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/style_box_bordered_rounded"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.9"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_item1"
+                        android:textColor="@color/color_red"
+                        style="@style/TitleText2"
+                        android:gravity="left"
+                        android:text=""
+                        android:layout_marginTop="@dimen/padding5"
+                        android:layout_marginLeft="@dimen/padding5"
+                        android:layout_marginRight="@dimen/padding5"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_item2"
+                        android:textColor="@color/color_red"
+                        style="@style/TitleText1"
+                        android:gravity="right"
+                        android:text=""
+                        android:layout_marginTop="@dimen/padding5"
+                        android:layout_marginLeft="@dimen/padding5"
+                        android:layout_marginRight="@dimen/padding5"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/padding5"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.25"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_black"
+                            style="@style/TitleText1"
+                            android:gravity="left"
+                            android:text="Status"
+                            android:layout_marginLeft="@dimen/padding5"
+                            android:layout_marginRight="@dimen/padding5"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_item3"
+                            android:textColor="@color/color_black"
+                            android:gravity="left"
+                            android:text=""
+                            android:layout_marginLeft="@dimen/padding5"
+                            android:layout_marginRight="@dimen/padding5"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.35"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_black"
+                            style="@style/TitleText1"
+                            android:gravity="left"
+                            android:text="Diajukan oleh"
+                            android:layout_marginLeft="@dimen/padding5"
+                            android:layout_marginRight="@dimen/padding5"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_item6"
+                            android:textColor="@color/color_black"
+                            android:gravity="left"
+                            android:text=""
+                            android:layout_marginLeft="@dimen/padding5"
+                            android:layout_marginRight="@dimen/padding5"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.4"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_black"
+                            style="@style/TitleText1"
+                            android:gravity="left"
+                            android:text="Nominal"
+                            android:layout_marginLeft="@dimen/padding5"
+                            android:layout_marginRight="@dimen/padding5"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_item4"
+                            android:textColor="@color/color_black"
+                            android:gravity="right"
+                            android:text=""
+                            android:layout_marginLeft="@dimen/padding5"
+                            android:layout_marginRight="@dimen/padding5"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/padding5"
+                    android:id="@+id/ll_item1"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_black"
+                            style="@style/TitleText1"
+                            android:gravity="left"
+                            android:text="Disetujui / ditolak oleh"
+                            android:layout_marginLeft="@dimen/padding5"
+                            android:layout_marginRight="@dimen/padding5"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_item7"
+                            android:textColor="@color/color_black"
+                            android:gravity="left"
+                            android:text=""
+                            android:layout_marginLeft="@dimen/padding5"
+                            android:layout_marginRight="@dimen/padding5"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_black"
+                            style="@style/TitleText1"
+                            android:gravity="left"
+                            android:text="Waktu disetujui / ditolak"
+                            android:layout_marginLeft="@dimen/padding5"
+                            android:layout_marginRight="@dimen/padding5"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_item8"
+                            android:textColor="@color/color_black"
+                            android:gravity="left"
+                            android:text=""
+                            android:layout_marginLeft="@dimen/padding5"
+                            android:layout_marginRight="@dimen/padding5"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/padding5"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_black"
+                            style="@style/TitleText1"
+                            android:gravity="left"
+                            android:text="Keterangan"
+                            android:layout_marginLeft="@dimen/padding5"
+                            android:layout_marginRight="@dimen/padding5"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_item5"
+                            android:textColor="@color/color_black"
+                            android:gravity="left"
+                            android:text=""
+                            android:layout_marginLeft="@dimen/padding5"
+                            android:layout_marginRight="@dimen/padding5"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.1"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@mipmap/ic_decision"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

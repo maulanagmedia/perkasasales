@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActOrderTcash.ActivityOrderTcash1">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/float_tambah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="@dimen/padding20"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="@dimen/padding20"
+        android:src="@drawable/plus_putih"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout19"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#f6f4f5"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline7">
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="center_vertical"
+            android:padding="@dimen/padding10"
+            android:text="@string/total"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text18"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="center_vertical"
+            android:padding="@dimen/padding5"
+            android:text="@string/rupiah_0"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text18"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#f6f4f5"
+        android:padding="@dimen/padding10"
+        android:paddingLeft="@dimen/padding20"
+        android:paddingRight="@dimen/padding20"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/btn_confirm"
+            android:contentDescription="@string/konfirmasi"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/padding5"
+            android:layout_marginRight="@dimen/padding5"
+            android:padding="@dimen/padding5"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_kalender_end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="0.1"
+            app:layout_constraintStart_toEndOf="@+id/btn_kalender_end"
+            app:layout_constraintTop_toTopOf="@+id/btn_kalender_end"
+            app:srcCompat="@drawable/right_arrow" />
+
+        <LinearLayout
+            android:id="@+id/btn_kalender_start"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/view2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout10">
+
+            <ImageView
+                android:id="@+id/img_calendar1"
+                android:contentDescription="@string/kalender"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:padding="@dimen/padding5"
+                app:srcCompat="@drawable/calender" />
+
+            <TextView
+                android:id="@+id/txt_start"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:gravity="center"
+                android:textSize="@dimen/text14" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="@dimen/padding5"
+            android:layout_marginRight="@dimen/padding5"
+            android:background="#000000"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_kalender_start"
+            app:layout_constraintEnd_toStartOf="@+id/btn_kalender_end"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="0.1"
+            app:layout_constraintStart_toEndOf="@+id/btn_kalender_start"
+            app:layout_constraintTop_toTopOf="@+id/btn_kalender_start" />
+
+        <LinearLayout
+            android:id="@+id/btn_kalender_end"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_kalender_start"
+            app:layout_constraintEnd_toStartOf="@+id/btn_confirm"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="0.4"
+            app:layout_constraintStart_toEndOf="@+id/view2"
+            app:layout_constraintTop_toTopOf="@+id/btn_kalender_start">
+
+            <ImageView
+                android:id="@+id/imageView24"
+                android:contentDescription="@string/kalender"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:padding="@dimen/padding5"
+                app:srcCompat="@drawable/calender" />
+
+            <TextView
+                android:id="@+id/txt_end"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:gravity="center"
+                android:textSize="@dimen/text14" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout10"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/style_box_bordered_rounded"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/btn_kalender_start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_search"
+                android:contentDescription="@string/cari"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:padding="@dimen/padding5"
+                android:src="@drawable/search" />
+
+            <EditText
+                android:id="@+id/txt_nama"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:padding="@dimen/padding5"
+                android:textSize="@dimen/text18" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcy_riwayat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline6" />
+</androidx.constraintlayout.widget.ConstraintLayout>

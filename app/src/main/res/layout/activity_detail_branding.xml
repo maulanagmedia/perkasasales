@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActBranding.DetailBranding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding10"
+            style="@style/TitleText"
+            android:text="@string/nama_reseller"/>
+
+        <TextView
+            android:id="@+id/tv_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            style="@style/ValueText"
+            android:text=""/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding10"
+            style="@style/TitleText"
+            android:text="@string/foto_sebelum"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/formGroup">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rv_sebelum"></androidx.recyclerview.widget.RecyclerView>
+
+            <cz.intik.overflowindicator.OverflowPagerIndicator
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/opi_sebelum"
+                android:layout_marginBottom="@dimen/padding12"
+                android:layout_marginTop="130dp"></cz.intik.overflowindicator.OverflowPagerIndicator>
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/ic_add_photo"
+                android:scaleType="centerInside"
+                android:id="@+id/ib_sebelum"
+                android:padding="@dimen/padding5"
+                android:layout_marginRight="@dimen/padding5"
+                android:layout_marginBottom="@dimen/padding5"
+                android:background="@drawable/btn_round"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding10"
+            style="@style/TitleText"
+            android:text="@string/foto_sesudah"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/formGroup">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rv_sesudah"></androidx.recyclerview.widget.RecyclerView>
+
+            <cz.intik.overflowindicator.OverflowPagerIndicator
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/opi_sesudah"
+                android:layout_marginBottom="@dimen/padding12"
+                android:layout_marginTop="130dp"></cz.intik.overflowindicator.OverflowPagerIndicator>
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/ic_add_photo"
+                android:scaleType="centerInside"
+                android:id="@+id/ib_sesudah"
+                android:padding="@dimen/padding5"
+                android:layout_marginRight="@dimen/padding5"
+                android:layout_marginBottom="@dimen/padding5"
+                android:background="@drawable/btn_round"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/formGroup"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/padding12"
+            android:id="@+id/ll_jarak"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.85"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/posisi_user"
+                    android:textSize="@dimen/text14"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_jarak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="@dimen/text18"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.15"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/ic_height_thor"
+                    android:layout_height="@dimen/ic_height_thor"
+                    android:background="?attr/selectableItemBackground"
+                    android:id="@+id/iv_refresh_jarak"
+                    android:src="@mipmap/ic_refresh"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding16"
+            android:layout_marginBottom="@dimen/padding12"
+            style="@style/formGroup">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_peta"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/padding10"
+                    android:background="#cacaca"
+                    android:text="@string/peta_outlet"
+                    android:textColor="#fff"/>
+
+                <Button
+                    android:id="@+id/btn_proses"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding10"
+                    android:background="@color/colorAccent"
+                    android:text="@string/proses"
+                    android:textColor="#fff"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

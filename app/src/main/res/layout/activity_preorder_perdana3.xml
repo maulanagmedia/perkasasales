@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityPreorderPerdana3">
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding10"
+        android:layout_marginStart="@dimen/padding10"
+        android:layout_marginTop="@dimen/padding10"
+        android:text="@string/untuk_tanggal"
+        android:textSize="@dimen/text14"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_jumlah" />
+
+    <EditText
+        android:id="@+id/txt_tanggal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding10"
+        android:layout_marginStart="@dimen/padding10"
+        android:layout_marginTop="@dimen/padding10"
+        android:background="@drawable/style_box_bordered_rounded"
+        android:ems="10"
+        android:inputType="none"
+        android:padding="@dimen/padding5"
+        android:textSize="@dimen/text16"
+        app:layout_constraintDimensionRatio=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView43" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding10"
+        android:layout_marginTop="@dimen/padding10"
+        android:text="@string/jumlah"
+        android:textSize="@dimen/text14"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_harga" />
+
+    <TextView
+        android:id="@+id/txt_harga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding10"
+        android:layout_marginStart="@dimen/padding10"
+        android:layout_marginTop="@dimen/padding10"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text16"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView42"
+        tools:text="@string/rupiah_0" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding10"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="@dimen/padding10"
+        android:text="@string/harga"
+        android:textSize="@dimen/text14"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nama" />
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding10"
+        android:layout_marginStart="@dimen/padding10"
+        android:layout_marginTop="@dimen/padding10"
+        android:text="@string/nama_barang"
+        android:textSize="@dimen/text14"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding10"
+        android:layout_marginStart="@dimen/padding10"
+        android:layout_marginTop="@dimen/padding10"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text16"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+    <EditText
+        android:id="@+id/txt_jumlah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding10"
+        android:layout_marginStart="@dimen/padding10"
+        android:layout_marginTop="@dimen/padding10"
+        android:background="@drawable/style_box_bordered_rounded"
+        android:ems="10"
+        android:inputType="number"
+        android:padding="@dimen/padding5"
+        android:textSize="@dimen/text16"
+        app:layout_constraintDimensionRatio=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+    <Button
+        android:id="@+id/btn_proses"
+        android:layout_width="@dimen/single_button_size"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/padding40"
+        android:layout_marginRight="@dimen/padding40"
+        android:layout_marginTop="@dimen/padding20"
+        android:background="@color/colorAccent"
+        android:text="@string/proses"
+        android:textColor="#fff"
+        android:textSize="@dimen/text14"
+        app:layout_constraintDimensionRatio="h,5:1.3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_tanggal" />
+
+    <ImageView
+        android:id="@+id/btn_tanggal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/padding10"
+        android:padding="@dimen/padding5"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_tanggal"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintStart_toEndOf="@+id/txt_tanggal"
+        app:layout_constraintTop_toTopOf="@+id/txt_tanggal"
+        app:srcCompat="@drawable/calender" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

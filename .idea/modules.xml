@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/PerkasaSales.iml" filepath="$PROJECT_DIR$/PerkasaSales.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PerkasaSales.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PerkasaSales.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/circualreveal/PerkasaSales.circualreveal.iml" filepath="$PROJECT_DIR$/.idea/modules/circualreveal/PerkasaSales.circualreveal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/coremodul/PerkasaSales.coremodul.iml" filepath="$PROJECT_DIR$/.idea/modules/coremodul/PerkasaSales.coremodul.iml" />
+    </modules>
+  </component>
+</project>

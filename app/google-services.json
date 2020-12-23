@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "664727610928",
+    "firebase_url": "https://perkasa-1ff66.firebaseio.com",
+    "project_id": "perkasa-1ff66",
+    "storage_bucket": "perkasa-1ff66.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:664727610928:android:960750f6d79c30c3",
+        "android_client_info": {
+          "package_name": "id.net.gmedia.perkasaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "664727610928-ao76nqs5ct8k9p7cked07d7836anss2c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.net.gmedia.perkasaapp",
+            "certificate_hash": "e975876398fd23dc0982c682e25ef27081c5dde4"
+          }
+        },
+        {
+          "client_id": "664727610928-udt503ig0j13tb8g79itb7mkab3n4ijv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA81exNgYRkxY0MqgKkxy8Aif5FHvo6dHg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "664727610928-udt503ig0j13tb8g79itb7mkab3n4ijv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

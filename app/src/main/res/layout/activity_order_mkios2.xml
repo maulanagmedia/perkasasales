@@ -1,0 +1,949 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clipToPadding="false"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:focusableInTouchMode="true"
+        tools:context=".ActivityOrderMkios2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/padding10"
+            app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcy_pulsa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    tools:layout_editor_absoluteX="22dp"
+                    tools:layout_editor_absoluteY="109dp">
+
+                    <TextView
+                        android:id="@+id/tv_nama1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="36sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/style_box_rounded"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/edt_jml1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/style_box_bordered_rounded"
+                                android:ems="10"
+                                android:hint="@string/jumlah"
+                                android:inputType="numberSigned"
+                                android:padding="@dimen/padding5"
+                                android:textSize="@dimen/text14" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_harga1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/text14"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_total1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:text="@string/rupiah_0"
+                                android:textSize="@dimen/text14" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    tools:layout_editor_absoluteX="22dp"
+                    tools:layout_editor_absoluteY="109dp">
+
+                    <TextView
+                        android:id="@+id/tv_nama5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="36sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/style_box_rounded"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/edt_jml5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/style_box_bordered_rounded"
+                                android:ems="10"
+                                android:hint="@string/jumlah"
+                                android:inputType="numberSigned"
+                                android:padding="@dimen/padding5"
+                                android:textSize="@dimen/text14" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_harga5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/text14"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_total5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:text="@string/rupiah_0"
+                                android:textSize="@dimen/text14" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    tools:layout_editor_absoluteX="22dp"
+                    tools:layout_editor_absoluteY="109dp">
+
+                    <TextView
+                        android:id="@+id/tv_nama10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="36sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/style_box_rounded"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/edt_jml10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/style_box_bordered_rounded"
+                                android:ems="10"
+                                android:hint="@string/jumlah"
+                                android:inputType="numberSigned"
+                                android:padding="@dimen/padding5"
+                                android:textSize="@dimen/text14" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_harga10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/text14"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_total10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:text="@string/rupiah_0"
+                                android:textSize="@dimen/text14" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    tools:layout_editor_absoluteX="22dp"
+                    tools:layout_editor_absoluteY="109dp">
+
+                    <TextView
+                        android:id="@+id/tv_nama20"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="36sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/style_box_rounded"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/edt_jml20"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/style_box_bordered_rounded"
+                                android:ems="10"
+                                android:hint="@string/jumlah"
+                                android:inputType="numberSigned"
+                                android:padding="@dimen/padding5"
+                                android:textSize="@dimen/text14" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_harga20"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/text14"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_total20"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:text="@string/rupiah_0"
+                                android:textSize="@dimen/text14" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    tools:layout_editor_absoluteX="22dp"
+                    tools:layout_editor_absoluteY="109dp">
+
+                    <TextView
+                        android:id="@+id/tv_nama25"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="36sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/style_box_rounded"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/edt_jml25"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/style_box_bordered_rounded"
+                                android:ems="10"
+                                android:hint="@string/jumlah"
+                                android:inputType="numberSigned"
+                                android:padding="@dimen/padding5"
+                                android:textSize="@dimen/text14" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_harga25"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/text14"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_total25"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:text="@string/rupiah_0"
+                                android:textSize="@dimen/text14" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    tools:layout_editor_absoluteX="22dp"
+                    tools:layout_editor_absoluteY="109dp">
+
+                    <TextView
+                        android:id="@+id/tv_nama50"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="36sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/style_box_rounded"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/edt_jml50"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/style_box_bordered_rounded"
+                                android:ems="10"
+                                android:hint="@string/jumlah"
+                                android:inputType="numberSigned"
+                                android:padding="@dimen/padding5"
+                                android:textSize="@dimen/text14" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_harga50"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/text14"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_total50"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:text="@string/rupiah_0"
+                                android:textSize="@dimen/text14" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    tools:layout_editor_absoluteX="22dp"
+                    tools:layout_editor_absoluteY="109dp">
+
+                    <TextView
+                        android:id="@+id/tv_nama100"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="36sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/style_box_rounded"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/edt_jml100"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/style_box_bordered_rounded"
+                                android:ems="10"
+                                android:hint="@string/jumlah"
+                                android:inputType="numberSigned"
+                                android:padding="@dimen/padding5"
+                                android:textSize="@dimen/text14" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_harga100"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/text14"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_total100"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:text="@string/rupiah_0"
+                                android:textSize="@dimen/text14" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    tools:layout_editor_absoluteX="22dp"
+                    tools:layout_editor_absoluteY="109dp">
+
+                    <TextView
+                        android:id="@+id/tv_namabulk"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="36sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/style_box_rounded"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/edt_jmlbulk"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/style_box_bordered_rounded"
+                                android:ems="10"
+                                android:hint="@string/jumlah"
+                                android:inputType="numberSigned"
+                                android:padding="@dimen/padding5"
+                                android:textSize="@dimen/text14" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_hargabulk"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/text14"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_totalbulk"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:text="@string/rupiah_0"
+                                android:textSize="@dimen/text14" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                style="@style/TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nama_reseller" />
+
+            <TextView
+                android:id="@+id/txt_nama"
+                style="@style/ValueText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                style="@style/TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding5"
+                android:text="Nomor" />
+
+            <TextView
+                android:id="@+id/tv_nomor"
+                style="@style/ValueText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                style="@style/TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding5"
+                android:text="Segmentasi" />
+
+            <TextView
+                android:id="@+id/tv_segmentasi"
+                style="@style/ValueText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                style="@style/TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding5"
+                android:text="Cara Bayar" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/rg_crbayar"
+                android:weightSum="2">
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Tunai"
+                    android:checked="true"
+                    android:id="@+id/rb_tunai"/>
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Transfer"
+                    android:id="@+id/rb_bank"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding10"
+                style="@style/TitleText"
+                android:text="Akun"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sp_akun"
+                android:layout_marginTop="@dimen/padding10"></Spinner>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView9"
+            style="@style/TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding10"
+            android:text="@string/pulsa"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_head" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/ll_jarak"
+            android:layout_marginTop="@dimen/padding10"
+            app:layout_constraintBottom_toTopOf="@+id/btn_peta"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_keterangan"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.85"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/posisi_user"
+                    android:textSize="@dimen/text14"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_jarak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="@dimen/text18"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.15"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/ic_height_thor"
+                    android:layout_height="@dimen/ic_height_thor"
+                    android:background="?attr/selectableItemBackground"
+                    android:id="@+id/iv_refresh_jarak"
+                    android:src="@mipmap/ic_refresh"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/keterangan"
+            android:textSize="@dimen/text14"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/txt_keterangan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding10"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/padding10"
+            android:paddingRight="@dimen/padding10"
+            app:layout_constraintBottom_toTopOf="@+id/textView17"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_content">
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/total"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/text18"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/rupiah_0"
+                android:textColor="@color/color_blue"
+                android:textSize="@dimen/text18"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/txt_keterangan"
+            android:layout_width="0dp"
+            android:layout_height="76dp"
+            android:layout_marginTop="@dimen/padding10"
+            android:background="@drawable/style_box_bordered_rounded"
+            android:ems="10"
+            android:visibility="gone"
+            android:gravity="top"
+            android:hint="..."
+            android:inputType="textMultiLine"
+            android:padding="@dimen/padding5"
+            android:text=""
+            android:textSize="@dimen/text14"
+            app:layout_constraintBottom_toTopOf="@+id/ll_jarak"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+        <Button
+            android:id="@+id/btn_proses"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:background="@color/colorAccent"
+            android:text="@string/proses"
+            android:textColor="#fff"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_peta"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_peta"
+            app:layout_constraintTop_toTopOf="@+id/btn_peta" />
+
+        <Button
+            android:id="@+id/btn_peta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding20"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding10"
+            android:background="#cacaca"
+            android:text="@string/peta_outlet"
+            android:textColor="#000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_proses"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_jarak" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

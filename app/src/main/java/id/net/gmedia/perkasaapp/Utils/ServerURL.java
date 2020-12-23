@@ -1,0 +1,118 @@
+package id.net.gmedia.perkasaapp.Utils;
+
+public class ServerURL {
+
+    //private static final String baseUrl = "http://192.168.17.187/perkasa-sales/";
+    //private static final String baseUrl = "http://36.66.177.165/sales/";
+//    private static final String baseU = "http://api.myperkasa.com/sales/";
+
+    private static final String baseUrl = "https://www.myperkasa.com/api/sales/";
+
+    public static final String auth = baseUrl + "authentication/";
+    public static final String getResellerMkios = baseUrl + "mkios/view_reseller/";
+    public static final String getDetailResellerMkios = baseUrl + "mkios/segmentasi/";
+    public static final String saveTransaksiMkios = baseUrl + "mkios/transaksi/";
+    public static final String getResellerPerdana = baseUrl + "perdana/view_customer/";
+    public static final String getSuratJalan = baseUrl + "perdana/list_surat_jalan/";
+    public static final String getListCCID = baseUrl + "perdana/list_perdana/";
+    public static final String saveTransaksiPerdana = baseUrl + "perdana/jual/";
+    public static final String getTransaksiHariIni = baseUrl + "Transaksi/today/";
+    public static final String getRiwayatTransaksi = baseUrl + "Transaksi/history/";
+    public static final String getJarakReseller = baseUrl + "Location/hitung_jarak/";
+    public static final String getLokasiReseller = baseUrl + "Location/view_outlet/";
+    public static final String getVersionApp = baseUrl + "version/";
+    public static final String getResellerInfo = baseUrl + "customer/";
+    public static final String getProvider = baseUrl + "provider/master_provider/";
+    public static final String saveMarketSurvey = baseUrl + "Market_Survey/add_survey/";
+    public static final String getMarketSurvey = baseUrl + "Market_Survey/view_survey/";
+    public static final String logLocation = baseUrl + "location/log_location/";
+    public static final String saveBrandingHeader = baseUrl + "branding/create_header/";
+    public static final String saveBrandingDetail = baseUrl + "branding/create_detail/";
+    public static final String getListBranding = baseUrl + "branding/view_branding/";
+    public static final String getListMarketIntelligent = baseUrl + "Market_Intel/view_market/";
+    public static final String saveMarketIntelligentHeader = baseUrl + "Market_Intel/create_header/";
+    public static final String saveMarketIntelligentDetail = baseUrl + "Market_Intel/create_detail/";
+    public static final String getPengajuanReseller = baseUrl + "customer/view_pengajuan/";
+    public static final String savePengajuanReseller = baseUrl + "customer/pengajuan/";
+    public static final String getResellerPelunasan = baseUrl + "pelunasan/view_customer/";
+    public static final String getDataAccount = baseUrl + "pelunasan/list_akun/";
+    public static final String getDataPiutang = baseUrl + "pelunasan/list_piutang/";
+    public static final String savePelunasanPiutang = baseUrl + "pelunasan/simpan_pelunasan/";
+    public static final String getPelunasanPiutang = baseUrl + "pelunasan/view_pelunasan/";
+    public static final String getBarangDS = baseUrl + "Direct_Sale/get_barang/";
+    public static final String logBalasanDS = baseUrl + "Direct_Sale/save_reply/";
+    public static final String saveOrderDS = baseUrl + "Direct_Sale/direct_order/";
+    public static final String getPerdanaDS = baseUrl + "Direct_Sale/get_perdana/";
+    public static final String saveFinalMarketIntel = baseUrl + "Market_Intel/update_header/";
+    public static final String saveFinalBranding = baseUrl + "Branding/update_header/";
+    public static final String getRekapSetoran = baseUrl + "pelunasan/rekap_pelunasan/";
+    public static final String getDetailRekapSetoran = baseUrl + "pelunasan/detail_pelunasan/";
+    public static final String getHargaTcash = baseUrl + "tcash/get_harga/";
+    public static final String getHargaNgrs = baseUrl + "tcash/get_harga_ngrs/";
+    public static final String saveTcash = baseUrl + "tcash/transaksi/";
+    public static final String getResellerKunjungan = baseUrl + "kunjungan/view_reseller/";
+    public static final String getKunjungan = baseUrl + "kunjungan/view_kunjungan/";
+    public static final String saveKunjungan = baseUrl + "kunjungan/simpan_kunjungan/";
+    public static final String getSales = baseUrl + "sales/index/";
+    public static final String getTanggalTempo = baseUrl + "customer/tempo/";
+    public static final String getPembayaranSetoran = baseUrl + "Pembayaran/index/";
+    public static final String savePassword = baseUrl + "authentication/ganti_password/";
+    public static final String getMutasiKonsinyasi = baseUrl + "Konsinyasi/index/";
+    public static final String getBarangMutasiKonsinyasi = baseUrl + "Konsinyasi/view_barang/";
+    public static final String getCCIDMutasiKonsinyasi = baseUrl + "Konsinyasi/list_ccid/";
+    public static final String saveMutasiKonsinyasi = baseUrl + "Konsinyasi/simpan_konsinyasi/";
+
+    public static final String getListRekonsinyasi = baseUrl + "Konsinyasi/view_penjualan/";
+    public static final String getOutletKonsinyasi = baseUrl + "Konsinyasi/view_outlet/";
+    public static final String getBarangRekonsinyasi = baseUrl + "Konsinyasi/view_barang_rekonsinyasi/";
+    public static final String saveRekonsinyasi = baseUrl + "Konsinyasi/simpan_rekonsinyasi/";
+    public static final String returRekonsinyasi = baseUrl + "Konsinyasi/retur_konsinyasi/";
+    public static final String getReturKonsinyasi = baseUrl + "Konsinyasi/history_retur/";
+    public static final String getSegmentasi = baseUrl + "Customer/segmentasi/";
+    public static final String getDaerah = baseUrl + "Customer/get_daerah/";
+    public static final String saveCustomer = baseUrl + "Customer/add_customer/";
+    public static final String getCustomerImage = baseUrl + "Customer/image/";
+    public static final String updateCustomer = baseUrl + "Customer/update_customer/";
+    public static final String getPencapaian = baseUrl + "Sales/target/";
+    public static final String getHargaMarkup = baseUrl + "Perdana/harga_markup/";
+    public static final String getPenjualanDealing = baseUrl + "Perdana/view_perdana_qty/";
+    public static final String getBarangDealing = baseUrl + "Perdana/stok_dealing/";
+    public static final String saveBarangDealing = baseUrl + "Perdana/perdana_qty/";
+    public static final String getPengajuanRKP = baseUrl + "Perdana/header_kemas/";
+    public static final String savePengajuanRKP = baseUrl + "Perdana/approve_kemas/";
+    public static final String getSurveyAdmin = baseUrl + "web_view/Survey?kdcus=%s&nik=%s&latitude=%s&longitude=%s";
+    public static final String getPencapaianSales = "https://myperkasa.com/simanajer/index.php/main/achievement_sales_mobile/";
+    public static final String getJadwalSurveyAdmin = baseUrl + "web_view/Survey/list_jadwal/";
+    public static final String getCustomerSurveyAdmin = baseUrl + "web_view/Survey/view_customer/";
+    public static final String validateSurveyAdmin = baseUrl + "web_view/Survey/validasi_lokasi/";
+    public static final String getPelunasanDealing = baseUrl + "pelunasan/pelunasan_dealing/";
+    public static final String getResellerPelunasanDealing = baseUrl + "pelunasan/customer_dealing/";
+    public static final String savePelunasanDealing = baseUrl + "pelunasan/simpan_pelunasan_dealing/";
+    public static final String getNotaDealing = baseUrl + "pelunasan/piutang_dealing/";
+    public static final String getPengajuanPlafonSales = baseUrl + "pengajuan/view_pengajuan/";
+    public static final String savePengajuanPlafonSales = baseUrl + "pengajuan/simpan_pengajuan/";
+    public static final String getAprrovalPlafonSales = baseUrl + "pengajuan/view_approval/";
+    public static final String saveApprovalPlafonSales = baseUrl + "pengajuan/approval_process/";
+
+    public static final String batalkanDealing = baseUrl + "Perdana/batalkan_dealing/";
+    public static final String saveInstalledApps = baseUrl + "Version/save_installed_apps/";
+    public static final String saveMockLocation = baseUrl + "Version/log_mock_location/";
+    public static final String saveCheckinOutlet = baseUrl + "checkin/";
+    public static final String viewCheckinOutlet = baseUrl + "checkin/view_checkin/";
+    public static final String getChatGroup = baseUrl + "chat/group/";
+    public static final String getChat = baseUrl + "chat/get_detail_chat/";
+    public static final String saveChat = baseUrl + "chat/send_text/";
+    public static final String saveFIleChat = baseUrl + "chat/send_file/";
+
+    public static final String getListCCIDPerdana = baseUrl+ "perdana/get_list_ccid/";
+    public static final String getCCIDDeposit = baseUrl + "Deposit/view_ccid/";
+    public static final String getPengajuanHeader = baseUrl + "Deposit/header_pengajuan_deposit/";
+    public static final String savePengajuanDepositePerdana = baseUrl + "deposit/approval_perdana/";
+    public static final String savePengajuanDeposite = baseUrl + "Deposit/approval_pengajuan_deposit/";
+    public static final String getPengajuanDetail = baseUrl + "Deposit/detail_pengajuan_deposit/" ;
+    public static final String getJarak = baseUrl + "Location/hitung_jarak/";
+    public static final String getApproval = baseUrl + "";
+    public static final String getHistoryDeposit= baseUrl + "Deposit/get_pengajuan_deposit/";
+
+    public static final String saveNGRS = baseUrl + "tcash/transaksi_ngrs/";
+}

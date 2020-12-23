@@ -1,0 +1,1032 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityHome"
+    android:id="@+id/supl_container"
+    tools:showIn="@layout/activity_home_toolbar"
+    android:focusableInTouchMode="true"
+    android:gravity="bottom"
+    android:paddingTop="?attr/actionBarSize"
+    sothree:umanoDragView="@+id/dragView"
+    sothree:umanoOverlay="true"
+    sothree:umanoPanelHeight="@dimen/swipe_height"
+    sothree:umanoParallaxOffset="100dp"
+    sothree:umanoShadowHeight="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:paddingBottom="@dimen/swipe_height"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/ll_penjualan_ke_rs"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Penjualan Ke Reseller"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text12"
+                        android:textStyle="bold"
+                        android:typeface="normal"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line_height"
+                        android:layout_marginTop="5dp"
+                        android:background="#9b9b9b" />
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="3">
+
+                        <LinearLayout
+                            android:id="@+id/btn_mkios"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="5dp"
+                                android:layout_weight="0.3"
+                                app:srcCompat="@drawable/order_mkios" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Order Mkios"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_perdana"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/order_perdana" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Order Perdana"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_tcash"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/order_tcash" />
+
+                            <TextView
+                                style="@android:style/Widget.DeviceDefault.Light.TextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Order Tcash"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_ngrs"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:layout_marginBottom="5dp"
+                                android:src="@drawable/ic_ngrs" />
+
+                            <TextView
+                                style="@android:style/Widget.DeviceDefault.Light.TextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="LinkAja NGRS"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_voucher"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:visibility="gone"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/order_perdana" />
+
+                            <TextView
+                                style="@android:style/Widget.DeviceDefault.Light.TextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Order Voucher"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+                        </LinearLayout>
+
+                    </androidx.gridlayout.widget.GridLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/ll_menu_direct_selling"
+                    app:layout_constraintTop_toBottomOf="@id/ll_penjualan_ke_rs">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Direct Selling"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text12"
+                        android:textStyle="bold"
+                        android:typeface="normal"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line_height"
+                        android:layout_marginTop="5dp"
+                        android:background="#9b9b9b" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/menu_height"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:id="@+id/btn_direct_selling"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/ic_direct_selling" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Direct Selling"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/ll_menu_supervisor"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/ll_menu_direct_selling">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Menu Supervisor"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text12"
+                        android:textStyle="bold"
+                        android:typeface="normal"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line_height"
+                        android:layout_marginTop="5dp"
+                        android:background="#9b9b9b" />
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="3">
+
+                        <LinearLayout
+                            android:id="@+id/btn_verifikasi"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/verifikasi_outlet" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Verifikasi Reseller"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_pencapain_sales"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/ic_pencapaian_sales" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Pencapaian Sales"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_kunjungan_admin"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/lokasi" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Kunjungan Admin"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_perdana_custom"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/ic_perdana_custom" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Penjualan Perdana Dealing"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_pembayaran_dealing"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/ic_pembayaran_dealing" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Pembayaran Dealing"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_pengajuan_plafon_sales"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/ic_tambah_pl_sales"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Perubahan Plafon Sales"
+                                android:textColor="#000"
+                                android:maxLines="2"
+                                android:ellipsize="end"
+                                android:textSize="@dimen/text10" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_approve_plafon_sales"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/ic_approve_pl_sales"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Approval Plafon Sales"
+                                android:textColor="#000"
+                                android:maxLines="2"
+                                android:ellipsize="end"
+                                android:textSize="@dimen/text10" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_rkp"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:visibility="gone"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/ic_rkp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Pengajuan Program"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_lokasi"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:visibility="gone"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/lokasi" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Lokasi Outlet"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+
+                        </LinearLayout>
+
+                    </androidx.gridlayout.widget.GridLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/ll_menu_operasional"
+                    app:layout_constraintTop_toBottomOf="@id/ll_menu_supervisor">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Menu Operasional"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text12"
+                        android:textStyle="bold"
+                        android:typeface="normal"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line_height"
+                        android:layout_marginTop="5dp"
+                        android:background="#9b9b9b" />
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="3">
+
+                        <LinearLayout
+                            android:id="@+id/btn_customer"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:layout_marginBottom="5dp"
+                                android:src="@drawable/tambah_customer" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Tambah Reseller"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_hari_ini"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/penjualan_hari_ini" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Penjualan Hari Ini"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_riwayat"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/riwayat_penjualan" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Riwayat Penjualan"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+                        </LinearLayout>
+
+                        <!--<LinearLayout
+                            android:id="@+id/btn_stok"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="5dp"
+                                android:layout_weight="0.3"
+                                app:srcCompat="@drawable/stok_perdana" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Stok Perdana"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+                        </LinearLayout>-->
+
+                        <!--<LinearLayout
+                            android:id="@+id/btn_komplain"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="5dp"
+                                android:layout_weight="0.3"
+                                app:srcCompat="@drawable/complaint" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Komplain"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+                        </LinearLayout>-->
+
+                        <!--<LinearLayout
+                            android:id="@+id/btn_preorder"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="5dp"
+                                android:layout_weight="0.3"
+                                app:srcCompat="@drawable/preorder_perdana" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Preorder Perdana"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+                        </LinearLayout>-->
+
+                        <LinearLayout
+                            android:id="@+id/btn_market_survey"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/ic_survey_market"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Market Survey"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_branding"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/ic_branding"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Branding"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_market_intelligent"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/ic_market_intelegent"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Market Intelligent"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_perubahan_data_rs"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/ic_note_pengajuan"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Perubahan Data Reseller"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_pelunasan_piutang"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="5dp"
+                                android:layout_weight="0.3"
+                                app:srcCompat="@drawable/daftar_piutang" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Pelunasan Piutang"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_kunjungan"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="5dp"
+                                android:layout_weight="0.3"
+                                app:srcCompat="@drawable/kunjungan" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Jadwal Kunjungan"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_setoran"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="5dp"
+                                android:layout_weight="0.3"
+                                app:srcCompat="@drawable/ic_setoran" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Setoran"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_konsinyasi"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="5dp"
+                                android:layout_weight="0.3"
+                                app:srcCompat="@drawable/ic_mutasi_konsinyasi" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Konsinyasi"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_checkin_outlet"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="5dp"
+                                android:layout_weight="0.3"
+                                app:srcCompat="@drawable/ic_checkin" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Checkin Outlet"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_transaksi_deposit"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"
+                            android:layout_height="@dimen/menu_height"
+                            android:clickable="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="5dp"
+                                android:layout_weight="0.3"
+                                app:srcCompat="@mipmap/transaksideposit"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_horizontal"
+                                android:text="Transaksi Deposit"
+                                android:textColor="#000"
+                                android:textSize="@dimen/text10" />
+
+
+
+                        </LinearLayout>
+
+                    </androidx.gridlayout.widget.GridLayout>
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/slide"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- SLIDING LAYOUT -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/layout_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

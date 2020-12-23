@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActPengajuanPLSales.DetailApprovalPL">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding10"
+            style="@style/TitleText"
+            android:text="@string/nama_sales"/>
+
+        <TextView
+            android:id="@+id/tv_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            style="@style/ValueText"
+            android:text=""/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding10"
+            style="@style/TitleText"
+            android:text="Jenis Pengajuan"/>
+
+        <TextView
+            android:id="@+id/tv_jenis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            style="@style/ValueText"
+            android:text=""/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding10"
+            style="@style/TitleText"
+            android:text="Plafon Tambahan Yang Diajukan"/>
+
+        <EditText
+            android:id="@+id/edt_nominal"
+            android:padding="@dimen/padding5"
+            android:minHeight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:background="@drawable/style_box_bordered_rounded"
+            android:text=""
+            android:inputType="none"
+            android:editable="false"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding10"
+            style="@style/TitleText"
+            android:text="Periode Mulai" />
+
+        <LinearLayout
+            android:id="@+id/btn_kalender_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding10"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_start"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:gravity="left"
+                android:text=""
+                android:textColor="@color/color_black"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:paddingTop="@dimen/padding5"
+                android:paddingBottom="@dimen/padding5" />
+
+            <ImageView
+                android:id="@+id/img_calendar1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:padding="@dimen/padding5"
+                app:srcCompat="@drawable/calender" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding10"
+            style="@style/TitleText"
+            android:text="Periode Berakhir" />
+
+        <LinearLayout
+            android:id="@+id/btn_kalender_end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding10"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_end"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:gravity="left"
+                android:text=""
+                android:textColor="@color/color_black"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:paddingTop="@dimen/padding5"
+                android:paddingBottom="@dimen/padding5"/>
+
+            <ImageView
+                android:id="@+id/img_calendar2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:padding="@dimen/padding5"
+                app:srcCompat="@drawable/calender" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding10"
+            style="@style/TitleText"
+            android:text="Keterangan" />
+
+        <EditText
+            android:id="@+id/edt_keterangan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="76dp"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding10"
+            android:background="@drawable/style_box_bordered_rounded"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="..."
+            android:inputType="none"
+            android:editable="false"
+            android:padding="@dimen/padding5"
+            android:text=""
+            android:textSize="@dimen/text14" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_tolak"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding10"
+                android:layout_marginRight="@dimen/padding10"
+                android:background="@color/color_pjp_tidak"
+                android:layout_marginTop="@dimen/padding20"
+                android:text="@string/tolak"
+                android:textColor="#fff" />
+
+            <Button
+                android:id="@+id/btn_setujui"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding10"
+                android:layout_marginRight="@dimen/padding10"
+                android:background="@color/colorAccent"
+                android:layout_marginTop="@dimen/padding20"
+                android:text="@string/setujui"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

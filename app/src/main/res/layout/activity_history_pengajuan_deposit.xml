@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Deposit.HistoryPengajuanDeposit">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_header"
+        android:orientation="vertical"
+        android:background="@color/colorPrimaryRed"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <AutoCompleteTextView
+            android:layout_width="290dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            style="@style/CustomAutoComplete"
+            android:hint="Nama Outlet"
+            android:background="@drawable/bg_item"
+            android:id="@+id/actv_outlet"
+            android:imeOptions="actionDone"
+            android:layout_marginBottom="@dimen/default_margin_tiny"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/ll_date"
+        android:padding="@dimen/default_margin_tiny"
+        android:background="@color/colorPrimaryRed"
+        android:weightSum="1"
+        app:layout_constraintTop_toBottomOf="@id/ll_header">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding20">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/calendar" />
+
+            <TextView
+                android:id="@+id/tv_from"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:textColor="@color/color_white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_line"
+                android:layout_marginLeft="@dimen/default_margin_small"
+                android:layout_marginRight="@dimen/default_margin_small"
+                android:background="@color/color_white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.05"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginLeft="@dimen/default_margin_tiny"
+                android:layout_marginRight="@dimen/default_margin_tiny"
+                android:background="@color/color_white"
+                android:gravity="center"
+                android:textColor="@color/color_white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:padding="@dimen/padding20"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/calendar"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:id="@+id/tv_to"
+                android:text=""
+                android:textColor="@color/color_white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_line"
+                android:background="@color/color_white"
+                android:layout_marginRight="@dimen/default_margin_small"
+                android:layout_marginLeft="@dimen/default_margin_small"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.15"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/ib_show"
+                android:background="@drawable/ic_next"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/lv_deposit"
+        app:layout_constraintTop_toBottomOf="@id/ll_date"
+        app:layout_constraintBottom_toTopOf="@id/ll_footer"></ListView>
+
+    <LinearLayout
+        android:id="@+id/ll_footer"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/color_white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/default_margin_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="Total"
+                android:textColor="@color/color_red"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_total"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="Rp 0"
+                android:textColor="@color/color_red"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/pb_loading"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

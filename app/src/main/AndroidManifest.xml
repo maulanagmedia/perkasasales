@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="id.net.gmedia.perkasaapp">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/AppThemeActionBar">
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity android:name=".ActNGRS.DetailNGRSActivity"></activity>
+        <activity android:name=".ActNGRS.ResellerNGRSActivity" />
+        <activity android:name=".ActCustomerService.DetailChatActivity" />
+        <activity android:name=".ActCustomerService.ListResellerCSActivity" />
+        <activity android:name=".ActCustomerService.ListGroupChatActivity" />
+        <activity
+            android:name=".ActCheckinOutlet.DetailCheckinOutlet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActCheckinOutlet.ActOutletCheckinOutlet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActCheckinOutlet.ActCheckinOutlet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActPengajuanPLSales.DetailApprovalPL"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActPengajuanPLSales.ListApprovalPL"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActPengajuanPLSales.DetailPengajuanPlafon"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActPengajuanPLSales.ListSalesPengajuanPL"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActPengajuanPLSales.ListPengajuanPlafon"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActOrderVoucher.OrderVoucherReseller"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActPembayaranDealing.DetailPembayaranDealing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActPembayaranDealing.ListResellerDealing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActPembayaranDealing.ListPembayaranDealing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKunjunganAdmin.SurveyKunjunganAdmin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKunjunganAdmin.DetailKunjunganAdmin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKunjunganAdmin.ListOutletKunjunganAdmin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKunjunganAdmin.ListKunjunganAdmin"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ActPencapaianSales.DetailPencapaianSales" />
+        <activity
+            android:name=".ActPengajuanRKP.HistoryPengajuanRKP"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActPengajuanRKP.ListPengajuanRKP"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActPerdanaCustom.DetailJualPerdanaCustom"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActPerdanaCustom.BarangPerdanaCustom"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActPerdanaCustom.CustomerPerdanaCustom"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActPerdanaCustom.ListJualPerdanaCustom"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActDeposit.MainDeposit"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider> <!-- Service -->
+        <service android:name=".NotificationUtils.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".NotificationUtils.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".Services.LocationUpdater"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Services.USSDService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/config_service" />
+        </service>
+
+        <receiver android:name=".Services.SmsReceiverService">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notif" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/color_notif" />
+
+        <activity
+            android:name=".ActivitySplashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ActivityLogin"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ActivityHome"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="ACT_HOME" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="ACT_CHAT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ActOrderPerdana.ActivityOrderPerdana1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActOrderMkios.ActivityOrderMkios1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActPenjualanHariIni.ActivityPenjualanHariIni"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ActOrderMkios.ActivityOrderMkios2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActOrderPerdana.ActivityOrderPerdana2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityStokPerdana"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActPelunasanPiutang.ActivityPiutang"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityKomplain1"
+            android:label="@string/title_activity_komplain"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ActivityKomplain2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActOrderTcash.ActivityOrderTcash1"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ActOrderTcash.ActivityOrderTcash2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActOrderTcash.ActivityOrderTcash3"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActVerifikasiReseller.ActivityVerifikasiOutlet1"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="ACT_CUSTOMER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ActVerifikasiReseller.ActivityVerifikasiOutlet2"
+            android:screenOrientation="portrait" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".ActivityLokasiOutlet1"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeActionBar.NoActionBar" />
+        <activity
+            android:name=".ActOrderPerdana.ActivityOrderPerdana3"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="fullSensor"
+            tools:replace="screenOrientation" />
+        <activity
+            android:name=".ActivityLokasiOutlet2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActRiwayatPenjualan.ActivityRiwayatPenjualan"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ActCustomer.ActivityTambahCustomer1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActCustomer.ActivityTambahCustomer2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityPreorderPerdana1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityPreorderPerdana2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKunjungan.ActivityKunjungan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKunjungan.ActivityKunjunganOutlet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKunjungan.ActivityKunjunganSales"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityPreorderPerdana3"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MapsResellerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActMarketSurvey.ListMarketSurvey"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActMarketSurvey.ListResellerMarketSurvey"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActMarketSurvey.DetailMarketSurvey"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActDirectSelling.ResellerDetailSelling"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActDirectSelling.DirectSellingPulsa"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActNotePengajuan.ResellerPerubahanData"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActNotePengajuan.ListPengajuanPerubahanRS"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActNotePengajuan.DetailPerubahanDataRS"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActBranding.ListBranding"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActBranding.ResellerBranding"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActBranding.DetailBranding"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActMarketIntelligent.ListMarketIntelligent"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActMarketIntelligent.ResellerMarketIntelligent"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActMarketIntelligent.DetailMarketIntelligent"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActPelunasanPiutang.ResellerPelunasanPiutang"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActPelunasanPiutang.DetailPelunasanPiutang"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActDirectSelling.DirectSellingPerdana"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SideAkunAnda.SideAccount"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActPelunasanPiutang.DetailTotalSetoran"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActPelunasanPiutang.DetailNotaTotalSetoran"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKunjungan.DetailKunjungan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActRiwayatPenjualan.ActivityListSales"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActSetoran.ListSetoran"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActChangePassword.ActChangePassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKonsinyasi.ActKonsinyasi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKonsinyasi.MutasiKonsinyasi.MutasiKonsinyasi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKonsinyasi.MutasiKonsinyasi.OutletKonsinyasi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKonsinyasi.MutasiKonsinyasi.BarangKonsinyasi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKonsinyasi.MutasiKonsinyasi.DetailMutasiKonsinyasi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKonsinyasi.Rekonsinyasi.Rekonsinyasi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKonsinyasi.Rekonsinyasi.OutletRekonsinyasi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKonsinyasi.Rekonsinyasi.DetailRekonsinyasi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKonsinyasi.InformasiBarang.OutletInfoBarang"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKonsinyasi.InformasiBarang.ActivityInfoBarang"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKonsinyasi.Retur.OutletRetur"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKonsinyasi.Retur.DetailReturKonsinyasi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKonsinyasi.Retur.ActReturKonsinyasi"
+            android:screenOrientation="portrait" /> <!-- <activity -->
+        <!-- android:name=".ActDeposit.ActHistory" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name=".Deposit.HistoryPengajuanDeposit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Deposit.MainPengajuanDeposit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Deposit.HeaderPengajuanDeposit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Deposit.DetailPengajuanDeposit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Deposit.DetailCCIDDeposit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Deposit.maps.MapsOutletActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActDeposit.ActPengajuanDeposit"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

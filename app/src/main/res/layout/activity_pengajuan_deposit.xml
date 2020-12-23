@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="16dp">
+
+        //pengajuan
+        <LinearLayout
+            android:layout_width="115dp"
+            android:layout_height="120dp"
+            android:weightSum="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/padding20"
+            android:layout_marginRight="@dimen/padding20"
+            android:layout_marginBottom="@dimen/padding20"
+            android:layout_marginTop="@dimen/padding20"
+            android:padding="10dp"
+            android:id="@+id/ll_pengajuan"
+            android:background="@drawable/btn_login">
+
+
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_note_pengajuan"
+                android:id="@+id/iv_left"
+                android:layout_alignParentLeft="true"/>
+
+            <!--<ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_next"
+                android:id="@+id/iv_right"
+                android:layout_alignParentRight="true"/>-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pengajuan"
+                android:layout_gravity="center"
+                android:textColor="@color/color_white"
+                android:layout_toRightOf="@id/iv_left"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+        //pembelian perdana
+        <LinearLayout
+            android:layout_width="115dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="@dimen/padding20"
+            android:layout_marginRight="@dimen/padding20"
+            android:layout_marginTop="@dimen/padding20"
+            android:layout_marginBottom="@dimen/padding20"
+            android:orientation="vertical"
+            android:weightSum="0"
+            android:padding="10dp"
+            android:id="@+id/ll_pembelian"
+            android:background="@drawable/btn_login">
+
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_preorder_perdana"
+                android:id="@+id/iv_left2"
+                android:layout_alignParentLeft="true"/>
+
+            <!--<ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_next"
+                android:id="@+id/iv_right2"
+                android:layout_alignParentRight="true"/>-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pembelian Perdana"
+                android:textColor="@color/color_white"
+                android:layout_toRightOf="@id/iv_left2"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+    </GridLayout>
+
+        //History Deposit
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="150dp">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:layout_margin="16dp">
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="@dimen/padding20"
+            android:layout_marginTop="@dimen/padding20"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:padding="10dp"
+            android:id="@+id/ll_history"
+            android:background="@drawable/btn_login">
+
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_history"
+                android:id="@+id/iv_left3"
+                android:layout_alignParentLeft="true"/>
+
+            <!--<ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_next"
+                android:id="@+id/iv_right3"
+                android:layout_alignParentRight="true"/>-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="History Deposit"
+                android:textColor="@color/color_white"
+                android:layout_toRightOf="@id/iv_left3"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+    </GridLayout>
+    </LinearLayout>
+</RelativeLayout>
