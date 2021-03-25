@@ -1048,9 +1048,8 @@ public class ActivityTambahCustomer2 extends AppCompatActivity implements OnMapR
                         txt_kelurahan.setText(jo.getString("kelurahan"));
                         txt_kecamatan.setText(jo.getString("kecamatan"));
                         txt_kota.setText(jo.getString("kota"));
-                        txt_nomor.setText(jo.getString("notelp"));
-                        txt_nomor.setText(jo.getString("notelp"));
-                        txt_nomorhp.setText(jo.getString("nohp"));
+                        txt_nomor.setText(jo.getString("nohp"));
+                        txt_nomorhp.setText(jo.getString("notelp"));
                         txt_email.setText(jo.getString("email"));
                         txt_bank.setText(jo.getString("bank"));
                         txt_rekening.setText(jo.getString("norekening"));

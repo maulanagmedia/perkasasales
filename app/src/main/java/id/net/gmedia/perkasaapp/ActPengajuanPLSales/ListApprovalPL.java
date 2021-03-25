@@ -42,7 +42,7 @@ import id.net.gmedia.perkasaapp.ActPengajuanPLSales.Adapter.AdapterApprovalPlafo
 import id.net.gmedia.perkasaapp.R;
 import id.net.gmedia.perkasaapp.Utils.ServerURL;
 
-public class ListApprovalPL extends AppCompatActivity {
+public class    ListApprovalPL extends AppCompatActivity {
 
     private Context context;
     private SessionManager session;
