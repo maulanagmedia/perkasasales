@@ -105,7 +105,9 @@ public class ServerURL {
     public static final String saveFIleChat = baseUrl + "chat/send_file/";
 
     public static final String getListCCIDPerdana = baseUrl+ "perdana/get_list_ccid/";
+    public static final String getListCCIDPerdanaGroup = baseUrl+ "perdana/get_list_ccid_group/";
     public static final String getCCIDDeposit = baseUrl + "Deposit/view_ccid/";
+    public static final String getCCIDDepositGroup = baseUrl + "Deposit/view_ccid_group/";
     public static final String getPengajuanHeader = baseUrl + "Deposit/header_pengajuan_deposit/";
     public static final String savePengajuanDepositePerdana = baseUrl + "deposit/approval_perdana/";
     public static final String savePengajuanDeposite = baseUrl + "Deposit/approval_pengajuan_deposit/";

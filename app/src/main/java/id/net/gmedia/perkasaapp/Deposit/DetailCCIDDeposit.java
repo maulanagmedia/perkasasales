@@ -342,7 +342,7 @@ public class DetailCCIDDeposit extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        ApiVolley request = new ApiVolley(context, jBody, "POST", ServerURL.getListCCIDPerdana, new ApiVolley.VolleyCallback() {
+        ApiVolley request = new ApiVolley(context, jBody, "POST", ServerURL.getListCCIDPerdanaGroup, new ApiVolley.VolleyCallback() {
             @Override
             public void onSuccess(String result) {
 
@@ -540,7 +540,7 @@ public class DetailCCIDDeposit extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        ApiVolley request = new ApiVolley(context, jBody, "POST", ServerURL.getCCIDDeposit,  new ApiVolley.VolleyCallback() {
+        ApiVolley request = new ApiVolley(context, jBody, "POST", ServerURL.getCCIDDepositGroup,  new ApiVolley.VolleyCallback() {
             @Override
             public void onSuccess(String result) {
 

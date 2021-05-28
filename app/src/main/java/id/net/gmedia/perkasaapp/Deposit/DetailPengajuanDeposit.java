@@ -413,13 +413,11 @@ public class DetailPengajuanDeposit extends AppCompatActivity implements Locatio
                                     jo.getString("debit"),
                                     jo.getString("nilai_status"),
                                     jo.getString("tgl") +" "+ jo.getString("jam"),
-                                    jo.getString("keterangan"),
+                                    jo.getString("keterangan") + " @ " + iv.ChangeToCurrencyFormat(jo.getString("harga")),
                                     "0",
                                     jo.getString("status"),
                                     jo.getString("kodebrg"),
                                     jo.getString("jumlah")
-
-
                             ));
 
                         }
