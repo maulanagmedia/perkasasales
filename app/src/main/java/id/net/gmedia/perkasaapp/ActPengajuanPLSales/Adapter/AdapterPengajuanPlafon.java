@@ -41,8 +41,13 @@ public class AdapterPengajuanPlafon extends RecyclerView.Adapter<AdapterPengajua
 
         final CustomItem outlet = listOutlet.get(position);
 
+        String jenis = outlet.getItem2();
+        if(jenis.equals("stok_perdana")){
+            jenis = "Stok Perdana";
+        }
+
         holder.txt_nama.setText(outlet.getItem4());
-        holder.txt_alamat.setText(iv.ChangeFormatDateString(outlet.getItem3(), FormatItem.formatTimestamp, FormatItem.formatDateTimeDisplay) + " "+ outlet.getItem2());
+        holder.txt_alamat.setText(iv.ChangeFormatDateString(outlet.getItem3(), FormatItem.formatTimestamp, FormatItem.formatDateTimeDisplay) + " "+ jenis);
         holder.txt_piutang.setText(iv.ChangeToRupiahFormat(iv.parseNullDouble(outlet.getItem5())));
         holder.txtStatus.setText(outlet.getItem6());
 

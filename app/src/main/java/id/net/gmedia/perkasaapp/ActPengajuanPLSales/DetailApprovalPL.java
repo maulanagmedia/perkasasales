@@ -103,6 +103,7 @@ public class DetailApprovalPL extends AppCompatActivity {
 
         listJenis.add(new OptionItem("mkios","Mkios"));
         listJenis.add(new OptionItem("perdana","Perdana"));
+        listJenis.add(new OptionItem("stok_perdana","Stok Perdana"));
 
         if(item.getItem1() != null && !item.getItem1().equals(null)){
 

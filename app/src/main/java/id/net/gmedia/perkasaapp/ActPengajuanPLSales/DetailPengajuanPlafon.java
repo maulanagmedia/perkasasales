@@ -108,6 +108,7 @@ public class DetailPengajuanPlafon extends AppCompatActivity {
 
         listJenis.add(new OptionItem("mkios","Mkios"));
         listJenis.add(new OptionItem("perdana","Perdana"));
+        listJenis.add(new OptionItem("stok_perdana","Stok Perdana"));
 
         adapter = new ArrayAdapter(context, R.layout.layout_simple_list, listJenis);
         spJenis.setAdapter(adapter);

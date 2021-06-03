@@ -141,7 +141,10 @@ public class SessionManager {
 
 	public boolean isBM(){
 
-		return (this.getJabatan().toUpperCase().contains("BM") || this.getJabatan().toUpperCase().contains("SUPERVISOR BDO"));
+		return (this.getJabatan().toUpperCase().contains("BM")
+				|| this.getJabatan().toUpperCase().contains("SUPERVISOR BDO")
+				|| this.getJabatan().toUpperCase().contains("GM")
+		);
 	}
 
 	// getUser
