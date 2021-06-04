@@ -62,6 +62,8 @@ import com.google.gson.reflect.TypeToken;
 //import com.leonardus.irfan.bluetoothprinter.Model.Item;
 //import com.leonardus.irfan.bluetoothprinter.Model.Transaksi;
 //import com.leonardus.irfan.bluetoothprinter.PspPrinter;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 import com.maulana.custommodul.ApiVolley;
 import com.maulana.custommodul.CustomItem;
 import com.maulana.custommodul.ItemValidation;
@@ -417,7 +419,8 @@ public class DetailPengajuanDeposit extends AppCompatActivity implements Locatio
                                     "0",
                                     jo.getString("status"),
                                     jo.getString("kodebrg"),
-                                    jo.getString("jumlah")
+                                    jo.getString("jumlah"),
+                                    jo.getString("nobukti")
                             ));
 
                         }
@@ -830,6 +833,18 @@ public class DetailPengajuanDeposit extends AppCompatActivity implements Locatio
             }
 
             Log.d(TAG, "onActivityResult: ");
+        }
+
+        // Scan Saldo tunai
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+        if(result.getContents() != null){
+
+            String selectedNobukti = result.getContents();
+            if(!selectedNobukti.equals(ListPengajuanDepositAdapter.selectedNobukti)){
+
+                adapterDeposit.updateStatus(ListPengajuanDepositAdapter.selectedId, "0");
+                Toast.makeText(context, "Pengajuan tidak sesuai, pastikan QR tepat", Toast.LENGTH_LONG).show();
+            }
         }
     }
 

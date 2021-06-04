@@ -11,11 +11,13 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 
+import com.google.zxing.integration.android.IntentIntegrator;
 import com.maulana.custommodul.CustomItem;
 import com.maulana.custommodul.ItemValidation;
 
 import java.util.List;
 
+import id.net.gmedia.perkasaapp.ActOrderPerdana.ActivityOrderPerdana3;
 import id.net.gmedia.perkasaapp.Deposit.DetailCCIDDeposit;
 import id.net.gmedia.perkasaapp.Deposit.DetailPengajuanDeposit;
 import id.net.gmedia.perkasaapp.R;
@@ -37,6 +39,7 @@ public class ListPengajuanDepositAdapter extends ArrayAdapter {
     private List<CustomItem> items;
     private ItemValidation iv = new ItemValidation();
     private String flag = "";
+    public static String selectedNobukti = "", selectedId = "";
 
     public ListPengajuanDepositAdapter(Activity context, List<CustomItem> items, String flag) {
         super(context, R.layout.cv_list_pengajuan_deposit, items);
@@ -106,7 +109,7 @@ public class ListPengajuanDepositAdapter extends ArrayAdapter {
         holder.tvItem1.setText(itemSelected.getItem2());
         holder.tvItem2.setText(iv.ChangeToRupiahFormat(itemSelected.getItem8()));
         holder.tvItem3.setText(Html.fromHtml(itemSelected.getItem3()));
-        holder.tvItem4.setText(iv.ChangeFormatDateString(itemSelected.getItem6(), FormatItem.formatDate2, FormatItem.formatDateDisplay2));
+        holder.tvItem4.setText(iv.ChangeFormatDateString(itemSelected.getItem6(), FormatItem.formatDate2, FormatItem.formatDateDisplay2) + " (" + itemSelected.getItem12()+")");
         holder.tvItem5.setText(itemSelected.getItem8());
         holder.tvItem6.setText(iv.ChangeToRupiahFormat(itemSelected.getItem4()));
 
@@ -143,6 +146,13 @@ public class ListPengajuanDepositAdapter extends ArrayAdapter {
                     intent.putExtra("jumlah", items.get(position).getItem11());
                     intent.putExtra("kodebrg", items.get(position).getItem10());
                     context.startActivityForResult(intent, 9);
+                }else if (b && flag.equals("SD")){
+
+                    selectedId = items.get(position).getItem1();
+                    selectedNobukti = items.get(position).getItem12();
+                    IntentIntegrator integrator = new IntentIntegrator(context);
+                    integrator.setOrientationLocked(false);
+                    integrator.initiateScan();
                 }
             }
         });
