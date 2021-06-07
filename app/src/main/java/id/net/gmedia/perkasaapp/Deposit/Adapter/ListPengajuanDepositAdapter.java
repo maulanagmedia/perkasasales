@@ -23,12 +23,6 @@ import id.net.gmedia.perkasaapp.Deposit.DetailPengajuanDeposit;
 import id.net.gmedia.perkasaapp.R;
 import id.net.gmedia.perkasaapp.Utils.FormatItem;
 
-//import gmedia.net.id.psp.NavPengajuanDeposit.DetailCCIDDeposit;
-//import gmedia.net.id.psp.NavPengajuanDeposit.DetailPengajuanDeposit;
-//import gmedia.net.id.psp.R;
-//import gmedia.net.id.psp.Utils.FormatItem;
-
-
 /**
  * Created by Shin on 1/8/2017.
  */
